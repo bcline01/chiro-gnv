@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-import OwlCarousel from 'react-owl-carousel';
+import React, { useState, useEffect } from 'react';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import Star from '../assets/stars.png';
 import '../styles/Review.css';
 import { reviews } from '../components/seedData';
-
 
 // Options for the OwlCarousel
 const options = {
@@ -31,40 +29,45 @@ const getRandomReviews = () => {
   return shuffledReviews.slice(0, 3);
 };
 
-
 const Review: React.FC = () => {
+  const [OwlCarousel, setOwlCarousel] = useState<any>(null);
   const [randomReviews] = useState(getRandomReviews()); // Get 3 random reviews
-  // console.log(randomReviews);
 
+  useEffect(() => {
+    import('react-owl-carousel').then((module) => {
+      setOwlCarousel(() => module.default);
+    });
+  }, []);
 
+  if (!OwlCarousel) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <section className="page-review">
-
-<OwlCarousel className="owl-theme" {...options}>
-{randomReviews.map((review, index) => (
-      <div key={index} className="item">
-        <div className="review-content">
-          <div className="img-section">
-            <img
-              src={Star}
-              alt="Star"
-              className="img-fluid"
-              style={{ maxWidth: '70%', height: 'auto', maxHeight: '100px', borderRadius: '6px' }}
-            />
-          </div>
-          <div className="text-column">
-            <div className='review-text'>
-              "{review.review}"
-              <br />
-              <strong>- {review.name}</strong>
+      <OwlCarousel className="owl-theme" {...options}>
+        {randomReviews.map((review, index) => (
+          <div key={index} className="item">
+            <div className="review-content">
+              <div className="img-section">
+                <img
+                  src={Star}
+                  alt="Star"
+                  className="img-fluid"
+                  style={{ maxWidth: '70%', height: 'auto', maxHeight: '100px', borderRadius: '6px' }}
+                />
+              </div>
+              <div className="text-column">
+                <div className='review-text'>
+                  "{review.review}"
+                  <br />
+                  <strong>- {review.name}</strong>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    ))}
-  
-</OwlCarousel>
+        ))}
+      </OwlCarousel>
     </section>
   );
 };
