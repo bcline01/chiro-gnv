@@ -4,7 +4,7 @@
 
 ## Description
 
-**Chiro-gnv** is a chiropractic website built using modern technologies like React, TypeScript, Node.js, Express, Bootstrap, and CSS. It is designed to create an interactive and seamless user experience for both patients and doctors. The platform enables users to easily navigate and engage with the website, while doctors can efficiently update and communicate with their patients.
+**Chiro-gnv** is a chiropractic website built using modern technologies like React, TypeScript, Node.js, Bootstrap, and CSS. It is designed to create an interactive and seamless user experience for both patients and doctors. The platform enables users to easily navigate and engage with the website, while doctors can efficiently update and communicate with their patients.
 
 ## Features
 
@@ -17,7 +17,6 @@
 - **React**: Frontend library for building interactive user interfaces.
 - **TypeScript**: Enhancing JavaScript with static typing.
 - **Node.js**: Backend runtime environment.
-- **Express**: Backend framework for building robust APIs.
 - **Bootstrap**: CSS framework for responsive design.
 - **CSS**: Styling for a polished and custom look.
 
@@ -27,10 +26,10 @@ Follow these steps to clone and run the project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/bcline01/doc-site.git
+   git clone https://github.com/bcline01/chiro-gnv
 2. Navigate to project directory:
    ```bash
-   cd doc-site
+   cd chiro-gnv
 3. Install the dependencies:
    ```bash
    npm install
