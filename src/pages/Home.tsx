@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 import AccessibilityToolbar from '../components/AccessibilityToolbar';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/Hero';
-import Chatbot from '../components/Chatbot';
+// import Chatbot from '../components/Chatbot';
 // import { useNavigate } from 'react-router-dom';
 // import NewPic from '../assets/techspine.png';
 
@@ -51,9 +51,7 @@ const Home: React.FC = () => {
       <section id="section7">
         <Footer />
       </section>
-      <div>
-        <Chatbot />
-      </div>
+      
     </div>
   );
 };
