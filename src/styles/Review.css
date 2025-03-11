@@ -1,0 +1,64 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+.page-review {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+  }
+
+  .page-review .review-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .page-review .img-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; 
+    opacity: 0.7;
+  }
+
+.page-review .text-column {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .page-review .owl-carousel .item .text-column .review-text {
+    font-size: 1.5rem ;
+    opacity: 0.7;
+    margin-top: 2%;
+    /* font-family: 'raleway', sans-serif; */
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 5%;
+    max-width: 80%;
+  }
+  
+  
+/* Review.css */
+.page-review .owl-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .page-review .owl-dot {
+    background: #ddd;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  
+  /* .page-review .owl-dot.active {
+    background: #3498db;
+  } */
+  
