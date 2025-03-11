@@ -1,10 +1,10 @@
-# Chiro-gnv
+# chiro-gnv
 
 ![Doc-Site Preview](src/assets/mainpic.png)
 
 ## Description
 
-**Chiro-gnv** is a chiropractic website built using modern technologies like React, TypeScript, Node.js, Bootstrap, and CSS. It is designed to create an interactive and seamless user experience for both patients and doctors. The platform enables users to easily navigate and engage with the website, while doctors can efficiently update and communicate with their patients.
+**chiro-gnv** is a chiropractic website built using modern technologies like React, TypeScript, Node.js, Bootstrap, and CSS. It is designed to create an interactive and seamless user experience for both patients and doctors. The platform enables users to easily navigate and engage with the website, while doctors can efficiently update and communicate with their patients.
 
 ## Features
 
