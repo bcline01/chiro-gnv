@@ -23,56 +23,43 @@ const OwlCarouselWrapper: React.FC = () => {
   return (
     <Slider {...options}>
       <div className="carousel-item">
-        <div className='doc-image-container'>   
+        <div className="doc-item">
           <img 
             src={Man1} 
-            alt="Man 1" 
+            alt="Dr. Matthew Richeson" 
           />
-          <div className="col-md-6 doc-text">
-            <p>Dr. Matthew Richeson</p>
-          </div>
+          <h3>Dr. Matthew Richeson</h3>
+          <p>Chiropractor and Wellness Specialist</p>
         </div>
       </div>
       <div className="carousel-item">
-        <div className="row align-items-center">
-          <div className="col-md-6 image-pair">
-            <img 
-              src={Man2} 
-              alt="Man 2" 
-              className="img-fluid" 
-            />
-          </div>
-          <div className="col-md-6 doc-text">
-            <p>Dr. Matthew Cline</p>
-          </div>
+        <div className="doc-item">
+          <img 
+            src={Man2} 
+            alt="Dr. Matthew Cline" 
+          />
+          <h3>Dr. Matthew Cline</h3>
+          <p>Chiropractor and Wellness Specialist</p>
         </div>
       </div>
       <div className="carousel-item">
-        <div className="row align-items-center">
-          <div className="col-md-6 image-pair">
-            <img 
-              src={Man3} 
-              alt="Man 3" 
-              className="img-fluid" 
-            />
-          </div>
-          <div className="col-md-6 doc-text">
-            <p>Dr. Cooper Cline</p>
-          </div>
+        <div className="doc-item">
+          <img 
+            src={Man3} 
+            alt="Dr. Cooper Cline" 
+          />
+          <h3>Dr. Cooper Cline</h3>
+          <p>Chiropractor and Wellness Specialist</p>
         </div>
       </div>
       <div className="carousel-item">
-        <div className="row align-items-center">
-          <div className="col-md-6 image-pair">
-            <img 
-              src={Man4} 
-              alt="Man 4" 
-              className="img-fluid" 
-            />
-          </div>
-          <div className="col-md-6 doc-text">
-            <p>Dr. Kent Owens</p>
-          </div>
+        <div className="doc-item">
+          <img 
+            src={Man4} 
+            alt="Dr. Kent Owens" 
+          />
+          <h3>Dr. Kent Owens</h3>
+          <p>Chiropractor and Wellness Specialist</p>
         </div>
       </div>
     </Slider>
