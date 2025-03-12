@@ -1,0 +1,64 @@
+/* DocStack.css */
+
+/* Style the DocStack container */
+.doc-stack {
+    display: grid;
+    grid-template-columns: repeat(2,  1fr);
+    gap: 10px;
+    padding: 50px 20px;
+    background-color: #e7e5e5;
+    margin-left: 12%;
+    margin-right: 12%;
+  }
+  
+  /* Style each doctor item */
+  .doc-item {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Makes the image and text stack vertically */
+    /* justify-content: space-between; */
+    max-width: 400px; /* Limits the width of each item */
+    /* padding: 20px; */
+    align-items: center; /* Centers content */
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 20px;
+    /* width: 100%;  */
+    /* max-width: 100%;  */
+  }
+  
+  /* Style the doctor's image */
+  .doc-item img {
+    width: 100%;
+    min-height: 250px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-bottom: 15px;
+  }
+  
+  /* Style the doctor's name and bio */
+  .doc-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .doc-item p {
+    color: #666;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .doc-stack {
+      grid-template-columns: 1fr;
+    }
+  
+    .doc-item {
+      padding: 15px;
+    }
+  }
+  

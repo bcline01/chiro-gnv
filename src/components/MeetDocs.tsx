@@ -1,49 +1,29 @@
 import React, { useEffect, useRef, useState } from 'react';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
 import '../styles/MeetDocs.css';
-import Man1 from '../assets/man1.png';
-import Man2 from '../assets/man2.png';
-import Man3 from '../assets/man3.png';
-import Man4 from '../assets/doc-4.png';
-
-// Options for the OwlCarousel
-const options = {
-  items: 1,
-  loop: true,
-  margin: 10,
-  nav: false,
-  dots: true,
-  autoplay: false,
-  responsive: {
-    0: { items: 1 },
-    400: { items: 1 },
-    600: { items: 1 },
-    700: { items: 1 },
-    800: { items: 1 },
-    1000: { items: 1 }
-  }
-};
+// import Man1 from '../assets/man1.png';
+// import Man2 from '../assets/man2.png';
+// import Man3 from '../assets/man3.png';
+// import Man4 from '../assets/doc-4.png';
+import DocStack from './DocStack';
+import OwlCarouselWrapper from './OwlCarouselWrapper'; 
 
 const MeetDocs: React.FC = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
   const [inView, setInView] = useState(false);
-  const [OwlCarousel, setOwlCarousel] = useState<any>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Use the Intersection Observer to detect when the section comes into view
+  // Intersection Observer for triggering animation when the section is in view
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
         if (entry.isIntersecting) {
-          setInView(true); // Section is in view, trigger the animation
+          setInView(true);
         } else {
-          setInView(false); // Section is out of view, reset the animation
+          setInView(false);
         }
       },
-      {
-        threshold: 0.25, // 25% of the section is visible
-      }
+      { threshold: 0.25 }
     );
 
     if (sectionRef.current) {
@@ -58,78 +38,21 @@ const MeetDocs: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    import('react-owl-carousel').then((module) => {
-      setOwlCarousel(() => module.default);
-    });
-  }, []);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
 
-  if (!OwlCarousel) {
-    return <div>Loading...</div>;
-  }
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <section ref={sectionRef} className={`doc-page ${inView ? 'animate-line' : ''}`}>
-      <div className='meet-doctors-text'> Meet Our Doctors</div>
-      <div className="blue-line"></div>
+      <div className='meet-doctors-text'>Meet Our Doctors</div>
 
-      <OwlCarousel className="owl-theme" {...options}>
-        <div className="carousel-item">
-          <div className="row align-items-center">
-            <div className="col-md-6 image-pair">
-              <img 
-                src={Man1} 
-                alt="Man 1" 
-                className="img-fluid rounded-circle" 
-              />
-            </div>
-            <div className="col-md-6 doc-text">
-              <p>Dr. Matthew Richeson</p>
-            </div>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="row align-items-center">
-            <div className="col-md-6 image-pair">
-              <img 
-                src={Man2} 
-                alt="Man 2" 
-                className="img-fluid rounded-circle" 
-              />
-            </div>
-            <div className="col-md-6 doc-text">
-              <p>Dr. Matthew Cline</p>
-            </div>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="row align-items-center">
-            <div className="col-md-6 image-pair">
-              <img 
-                src={Man3} 
-                alt="Man 3" 
-                className="img-fluid rounded-circle" 
-              />
-            </div>
-            <div className="col-md-6 doc-text">
-              <p>Dr. Cooper Cline</p>
-            </div>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="row align-items-center">
-            <div className="col-md-6 image-pair">
-              <img 
-                src={Man4} 
-                alt="Man 4" 
-                className="img-fluid rounded-circle" 
-              />
-            </div>
-            <div className="col-md-6 doc-text">
-              <p>Dr. Kent Owens</p>
-            </div>
-          </div>
-        </div>
-      </OwlCarousel>
+      {isMobile ? <OwlCarouselWrapper /> : <DocStack />}
     </section>
   );
 };
