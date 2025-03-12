@@ -16,7 +16,7 @@ const AccessibilityToolbar: React.FC = () => {
     const [fontSizeH, setFontSizeH] = useState(2.3); // 
     const [fontSizeP, setFontSizeP] = useState(1.2); //
     const [fontSizeDoc, setFontSizeDoc] = useState(3.75); 
-    const [fontSizeWelcome, setFontSizeWelcome] = useState(3.5); 
+    const [fontSizeWelcome, setFontSizeWelcome] = useState(5); 
     const [fontSizeNav, setFontSizeNav] = useState(1); // Default font size of 1rem
 
     const setHighContrast = useState(false)[1]; // High contrast mode state

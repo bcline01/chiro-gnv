@@ -1,8 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import SpinePic from '../assets/spineImg.png';
-import Video from '../assets/video.mp4';
+// import Video from '../assets/video.mp4';
 import '../styles/Home.css';
 import React from 'react';
+import office from '../assets/stretch.png';
 
 
 const HeroSection: React.FC = () => {
@@ -16,10 +17,11 @@ const HeroSection: React.FC = () => {
   
     return (
       <section id="section1" className="home-page">
-        <video autoPlay loop muted className="background-video">
+        {/* <video autoPlay loop muted className="background-video">
           <source src={Video} type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
+        <img src={office} alt="Office" className="background-video" />
         <div className='small-picture'>
           <img src={SpinePic} alt="Spine" />
         </div>
