@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
           <source src={Video} type="video/mp4" />
           Your browser does not support the video tag.
         </video> */}
-        <img src={office} alt="Office" className="background-video" />
+        <img src={office} alt="Office" className="background-image" />
         <div className='small-picture'>
           <img src={SpinePic} alt="Spine" />
         </div>
@@ -31,10 +31,11 @@ const HeroSection: React.FC = () => {
             <div>We Welcome New Patients</div>
             
             <button className="home-btn" onClick={handleButton}>Request a New Appointment</button>
-            </div>
+            
             <div className='extra-buttons'>
           <button className='extra-button'>Call Us</button>
           <button className='extra-button'>Get Directions</button> 
+          </div>
           </div>
           <div />
         

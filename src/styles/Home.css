@@ -1,18 +1,5 @@
 /* styles/Home.css */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
 
-
-/* .home-page {
-    position: absolute;
-    min-height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    flex-direction: column;
-  } */
 .home-page {
   position: relative;
   min-height: 100vh;
@@ -29,28 +16,26 @@
     position: relative;
     z-index: 2;
     color: black;
-    font-size: 3rem;
+    font-size: 5rem;
     max-width: 70%;
     font-family: 'EB Garamond', serif;
-    font-weight: none;
-   /* font-family: "Raleway", sans-serif; */
+    font-weight: bold;
    top: -30px; 
-   /* left: 150px;  */
   }
 
 
-  .background-video {
+  .background-image {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
-    transform: translate(-50%, -50%);
     z-index: -1; 
-    opacity: .8; /*trying something new*/
-    pointer-events: auto !important; /* Ignore mouse events */
-  }
+    opacity: 0.8;
+    pointer-events: none; /* Ensures it doesn't interfere with clicks */
+}
+
   .home-btn {
     position: relative;
     display: inline-block;
@@ -196,6 +181,11 @@
 
 @media (max-width: 390px) {
 
+  .home-page {
+    background-color: #f9f6f6;
+    z-index: -1;
+  }
+
   .nav-items {
     display: none;
     flex-direction: column; /* Stack the items vertically */
@@ -264,86 +254,112 @@
     font-size: 3rem;
 
   }
-  .extra-buttons {
-    display: flex; 
-    margin: 10px;
-    padding: 10px;
-    color: white;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    font-size: 1.5rem;
-  }
-  .extra-button {
-    position: relative;
-    display: inline-block;
-    font-size: 1.5rem;
-    font-family: 'EB Garamond', serif;
-    border-radius: 6px;
-    background-color: rgb(161 157 157);
-    color: white;
-    cursor: pointer !important;
-    pointer-events: auto !important;
-    z-index: 9999;
-    text-transform: lowercase;
-    letter-spacing: 2px;
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .extra-button:hover {
-    background-color: rgb(31, 31, 31);
-color: white;
-  }
-  .home-btn {
-    position: relative;
-    display: inline-block;
-    font-size: 1.5rem;
-    font-family: 'EB Garamond', serif;
-    border-radius: 6px;
-    background-color: rgb(161 157 157);
-    color: white;
-    cursor: pointer !important;
-    pointer-events: auto !important;
-    z-index: 9999;
-    text-transform: lowercase;
-    letter-spacing: 2px;
+/* Make buttons take full width for a clean look */
+.home-btn, .extra-buttons {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
 
-  }
-  .content {
-    position: relative;
-    z-index: 2;
-    color: rgb(84, 81, 81);
-    font-size: 3rem;
-    max-width: 70%;
-    font-family: 'EB Garamond', serif;
-    font-weight: none;
-   /* font-family: "Raleway", sans-serif; */
-   top: 0; /* Adjust the value to move up */
-   left: 0; 
-  }
+/* Style for buttons */
+.home-btn, .extra-button {
+  font-size: 1.2rem;
+  padding: 12px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+}
+
+/* Primary button styles */
+.home-btn {
+  background-color: #e1e0e0;
+  color: black;
+}
+
+.home-btn:hover {
+  background-color: rgb(31, 31, 31);
+}
+
+/* Extra buttons */
+.extra-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.extra-button {
+  background-color: #e1e0e0;
+  color: black;
+}
+
+.extra-button:hover {
+  background-color: rgb(31, 31, 31);
+}
+
+ 
+    /* Stack the content below the image */
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 90%;
+      max-width: 350px;
+      margin: 0 auto;
+      padding: 15px;
+      position: static; /* Removes positioning issues */
+      margin-top: 65%; /* Adjust this value as needed */
+
+    }
+  
+    /* Style for the main heading */
+    .content div {
+      font-size: 2.2rem;
+      /* font-weight: bold; */
+      margin-bottom: 10px;
+    }
+  
+  .background-image {
+    object-fit: contain;
+    object-position: center top; /* Adjust focus on mobile */
+    opacity: 0.9; /* Slightly reduce opacity for readability */
+    top: 80px;
+}
   }
   
 
 
 
-  @media (min-width: 391px) and (max-width: 1024px) {
+  @media (min-width: 391px) and (max-width: 1023px) {
 
-  .content {
-    position: relative;
-    z-index: 2;
-    color: rgb(84, 81, 81);
-    font-size: 3rem;
-    max-width: 70%;
-    font-family: 'EB Garamond', serif;
-    font-weight: none;
-   /* font-family: "Raleway", sans-serif; */
-   top: 0; /* Adjust the value to move up */
-   left: 0; 
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 90%;
+      max-width: 350px;
+      margin: 0 auto;
+      padding: 15px;
+      position: static; /* Removes positioning issues */
+      margin-top: 65%; /* Adjust this value as needed */
+
+    }
+  
+    /* Style for the main heading */
+    .content div {
+      font-size: 3.5rem;
+      /* font-weight: bold; */
+      margin-bottom: 10px;
+    }
+    .background-image {
+      object-fit: contain;
+      object-position: center top; /* Adjust focus on mobile */
+      opacity: 0.9; /* Slightly reduce opacity for readability */
+      top: 80px;
   }
-   /* .background-video {
-     display: none;
-   }   */
 
 
    .nav-items {
@@ -421,65 +437,50 @@ color: white;
       font-size: 3rem;
 
     }
-    .extra-buttons {
-      display: flex; 
-      margin: 10px;
-      padding: 10px;
-      color: white;
-      flex-direction: column;
-      align-items: center;
-      gap: 5px;
-      font-size: 1.5rem;
-    }
-    .extra-button {
-      position: relative;
-      display: inline-block;
-      font-size: 1.5rem;
-      font-family: 'EB Garamond', serif;
-      border-radius: 6px;
-      background-color: rgb(140, 138, 138);
-      color: white;
-      cursor: pointer !important;
-      pointer-events: auto !important;
-      z-index: 9999;
-      text-transform: lowercase;
-      letter-spacing: 2px;
-      width: 100%;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-    .extra-button:hover {
-      background-color: rgb(31, 31, 31);
-  color: white;
-    }
-    .home-btn {
-      position: relative;
-      display: inline-block;
-      font-size: 1.5rem;
-      font-family: 'EB Garamond', serif;
-      border-radius: 6px;
-      background-color: rgb(140, 138, 138);
-      color: white;
-      cursor: pointer !important;
-      pointer-events: auto !important;
-      z-index: 9999;
-      text-transform: lowercase;
-      letter-spacing: 2px;
+   /* Make buttons take full width for a clean look */
+.home-btn, .extra-buttons {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
 
-    }
-    /* .small-picture {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 200%;
-      height: auto; 
-      max-height: 100%; 
-      object-fit: cover; 
-      object-position: 50% 30%; 
-      transform: translate(-50%, -50%);
-      z-index: -1; 
-    } */
+/* Style for buttons */
+.home-btn, .extra-button {
+  font-size: 1.2rem;
+  padding: 12px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+}
+
+/* Primary button styles */
+.home-btn {
+  background-color: #e1e0e0;
+  color: black;
+}
+
+.home-btn:hover {
+  background-color: rgb(31, 31, 31);
+}
+
+/* Extra buttons */
+.extra-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.extra-button {
+  background-color: #e1e0e0;
+  color: black;
+}
+
+.extra-button:hover {
+  background-color: rgb(31, 31, 31);
+}
+
   }
 
  
