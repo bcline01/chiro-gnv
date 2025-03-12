@@ -1,105 +1,82 @@
-// OwlCarouselWrapper.tsx
-import React, { useEffect, useState } from 'react';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-// import OwlCarousel from 'react-owl-carousel';
+import React from 'react';
+import Slider from 'react-slick'; // Import Slider from react-slick
+import 'slick-carousel/slick/slick.css'; // Import slick carousel CSS
+import 'slick-carousel/slick/slick-theme.css'; // Import slick carousel theme CSS
 import Man1 from '../assets/man1.png';
 import Man2 from '../assets/man2.png';
 import Man3 from '../assets/man3.png';
 import Man4 from '../assets/doc-4.png'; 
 import '../styles/OwlCarouselWrapper.css';
 
+// Options for react-slick carousel
 const options = {
-  items: 1,
-  loop: true,
-  margin: 10,
-  nav: false,
   dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
   autoplay: false,
-  responsive: {
-    0: { items: 1 },
-    400: { items: 1 },
-    600: { items: 1 },
-    700: { items: 1 },
-    800: { items: 1 },
-    1000: { items: 1 }
-  }
+  adaptiveHeight: true, // Adjusts the height to fit content
 };
 
 const OwlCarouselWrapper: React.FC = () => {
-    const [OwlCarousel, setOwlCarousel] = useState<any>(null);
-
-    useEffect(() => {
-        import('react-owl-carousel').then((module) => {
-          setOwlCarousel(() => module.default);
-        });
-      }, []);
-    
-      if (!OwlCarousel) {
-        return <div>Loading...</div>;
-      }
-
   return (
-    <OwlCarousel className="owl-theme" {...options}>
-    <div className="carousel-item">
+    <Slider {...options}>
+      <div className="carousel-item">
         <div className='doc-image-container'>   
           <img 
             src={Man1} 
             alt="Man 1" 
-            // className="img-fluid " 
           />
-        <div className="col-md-6 doc-text">
-          <p>Dr. Matthew Richeson</p>
-        </div>
-        </div>
-      
-    </div>
-    <div className="carousel-item">
-      <div className="row align-items-center">
-        <div className="col-md-6 image-pair">
-          <img 
-            src={Man2} 
-            alt="Man 2" 
-            className="img-fluid " 
-          />
-        </div>
-        <div className="col-md-6 doc-text">
-          <p>Dr. Matthew Cline</p>
+          <div className="col-md-6 doc-text">
+            <p>Dr. Matthew Richeson</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div className="carousel-item">
-      <div className="row align-items-center">
-        <div className="col-md-6 image-pair">
-          <img 
-            src={Man3} 
-            alt="Man 3" 
-            className="img-fluid " 
-          />
-        </div>
-        <div className="col-md-6 doc-text">
-          <p>Dr. Cooper Cline</p>
-        </div>
-      </div>
-    </div>
-    <div className="carousel-item">
-      <div className="row align-items-center">
-        <div className="col-md-6 image-pair">
-          <img 
-            src={Man4} 
-            alt="Man 4" 
-            className="img-fluid " 
-          />
-        </div>
-        <div className="col-md-6 doc-text">
-          <p>Dr. Kent Owens</p>
+      <div className="carousel-item">
+        <div className="row align-items-center">
+          <div className="col-md-6 image-pair">
+            <img 
+              src={Man2} 
+              alt="Man 2" 
+              className="img-fluid" 
+            />
+          </div>
+          <div className="col-md-6 doc-text">
+            <p>Dr. Matthew Cline</p>
+          </div>
         </div>
       </div>
-    </div>
-    
-  </OwlCarousel>
+      <div className="carousel-item">
+        <div className="row align-items-center">
+          <div className="col-md-6 image-pair">
+            <img 
+              src={Man3} 
+              alt="Man 3" 
+              className="img-fluid" 
+            />
+          </div>
+          <div className="col-md-6 doc-text">
+            <p>Dr. Cooper Cline</p>
+          </div>
+        </div>
+      </div>
+      <div className="carousel-item">
+        <div className="row align-items-center">
+          <div className="col-md-6 image-pair">
+            <img 
+              src={Man4} 
+              alt="Man 4" 
+              className="img-fluid" 
+            />
+          </div>
+          <div className="col-md-6 doc-text">
+            <p>Dr. Kent Owens</p>
+          </div>
+        </div>
+      </div>
+    </Slider>
   );
 };
-
 
 export default OwlCarouselWrapper;

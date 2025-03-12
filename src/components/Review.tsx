@@ -1,26 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
+import React, { useState } from 'react';
+import Slider from 'react-slick'; // Import react-slick
+import 'slick-carousel/slick/slick.css'; // Import slick carousel CSS
+import 'slick-carousel/slick/slick-theme.css'; // Import slick carousel theme CSS
 import Star from '../assets/stars.png';
 import '../styles/Review.css';
 import { reviews } from '../components/seedData';
 
-// Options for the OwlCarousel
+// Options for the Slider (react-slick)
 const options = {
-  items: 1,
-  loop: true,
-  margin: 10,
-  nav: false,
   dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
   autoplay: false,
-  responsive: {
-    0: { items: 1 },
-    400: { items: 1 },
-    600: { items: 1 },
-    700: { items: 1 },
-    800: { items: 1 },
-    1000: { items: 1 }
-  }
+  adaptiveHeight: true, // Adjusts the height to fit content
 };
 
 const getRandomReviews = () => {
@@ -30,24 +24,16 @@ const getRandomReviews = () => {
 };
 
 const Review: React.FC = () => {
-  const [OwlCarousel, setOwlCarousel] = useState<any>(null);
   const [randomReviews] = useState(getRandomReviews()); // Get 3 random reviews
 
-  useEffect(() => {
-    import('react-owl-carousel').then((module) => {
-      setOwlCarousel(() => module.default);
-    });
-  }, []);
-
-  if (!OwlCarousel) {
-    return <div>Loading...</div>;
-  }
+  console.log(randomReviews); // Log the reviews to check if they are being fetched correctly
 
   return (
     <section className="page-review">
-      <OwlCarousel className="owl-theme" {...options}>
+      {/* Use Slider instead of OwlCarousel */}
+      <Slider {...options}>
         {randomReviews.map((review, index) => (
-          <div key={index} className="item">
+          <div key={index} className="slick-slide">
             <div className="review-content">
               <div className="img-section">
                 <img
@@ -67,7 +53,7 @@ const Review: React.FC = () => {
             </div>
           </div>
         ))}
-      </OwlCarousel>
+      </Slider>
     </section>
   );
 };
