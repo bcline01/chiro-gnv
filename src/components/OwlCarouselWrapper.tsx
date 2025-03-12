@@ -42,20 +42,17 @@ const OwlCarouselWrapper: React.FC = () => {
   return (
     <OwlCarousel className="owl-theme" {...options}>
     <div className="carousel-item">
-      <div className="row align-items-center">
         <div className='doc-image-container'>   
-        <div className="col-md-6 image-pair">
           <img 
             src={Man1} 
             alt="Man 1" 
-            className="img-fluid " 
+            // className="img-fluid " 
           />
-        </div>
-        </div>
         <div className="col-md-6 doc-text">
           <p>Dr. Matthew Richeson</p>
         </div>
-      </div>
+        </div>
+      
     </div>
     <div className="carousel-item">
       <div className="row align-items-center">
