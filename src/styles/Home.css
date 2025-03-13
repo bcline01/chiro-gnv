@@ -324,7 +324,7 @@
       max-width: 350px;
       margin: 0 auto;
       padding: 15px;
-      position: relative; /* Removes positioning issues */
+      position: static; /* Removes positioning issues */
       margin-top: 65%; /* Adjust this value as needed */
       z-index: 10000;
 
