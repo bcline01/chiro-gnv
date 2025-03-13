@@ -46,7 +46,7 @@
     color: black;
     cursor: pointer !important;
     pointer-events: auto !important;
-    z-index: 9999;
+    z-index: 10000;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 20px;
@@ -70,7 +70,7 @@
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     height: 80px;
-    z-index: 1000; /* Make sure it stays above other content */
+    z-index: 10000; /* Make sure it stays above other content */
   }
 
   .hamburger {
@@ -198,7 +198,7 @@
     padding: 1rem 0;
     justify-content: center;
     text-align: center; /* Center the text */
-    z-index: 9999; /* Ensure it's on top of other elements */
+    z-index: 10000; /* Ensure it's on top of other elements */
   }
   .nav-items a {
     text-decoration: none;
@@ -259,7 +259,9 @@
   width: 100%;
   max-width: 300px;
   margin-bottom: 10px;
-  z-index: 9999;
+  z-index: 10000;
+  pointer-events: auto !important;
+
 }
 
 /* Style for buttons */
@@ -271,7 +273,7 @@
   cursor: pointer;
   width: 100%;
   border: none;
-  z-index: 9999;
+  z-index: 10000;
   position: relative;
 }
 
@@ -279,7 +281,9 @@
 .home-btn {
   background-color: #e1e0e0;
   color: black;
-  z-index: 9999;
+  z-index: 10000;
+  pointer-events: auto !important;
+
 }
 
 .home-btn:hover {
@@ -292,14 +296,16 @@
   display: flex;
   flex-direction: column;
   /* gap: 10px; */
-  z-index: 9999;
+  z-index: 10000;
   position: relative;
+  pointer-events: auto !important;
+
 }
 
 .extra-button {
   background-color: #e1e0e0;
   color: black;
-  z-index: 9999;
+  z-index: 10000;
 }
 
 .extra-button:hover {
@@ -320,7 +326,7 @@
       padding: 15px;
       position: relative; /* Removes positioning issues */
       margin-top: 65%; /* Adjust this value as needed */
-      z-index: 9999;
+      z-index: 10000;
 
     }
   
@@ -385,7 +391,7 @@
     padding: 1rem 0;
     justify-content: center;
     text-align: center; /* Center the text */
-    z-index: 9999; /* Ensure it's on top of other elements */
+    z-index: 10000; /* Ensure it's on top of other elements */
   }
 
   /* Style the navigation links */
@@ -453,6 +459,8 @@
   width: 100%;
   max-width: 300px;
   margin-bottom: 10px;
+  pointer-events: auto !important;
+
 }
 
 /* Style for buttons */
@@ -464,12 +472,16 @@
   cursor: pointer;
   width: 100%;
   border: none;
+  pointer-events: auto !important;
+
 }
 
 /* Primary button styles */
 .home-btn {
   background-color: #e1e0e0;
   color: black;
+  pointer-events: auto !important;
+
 }
 
 .home-btn:hover {
@@ -481,6 +493,8 @@
 .extra-buttons {
   display: flex;
   flex-direction: column;
+  pointer-events: auto !important;
+
   /* gap: 10px; */
 }
 
