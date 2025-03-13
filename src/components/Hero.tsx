@@ -30,15 +30,19 @@ const HeroSection: React.FC = () => {
           <div className='content'>
             <div>We Welcome New Patients</div>
             
-            <button className="home-btn" onClick={handleButton}>Request a New Appointment</button>
-            
-            <div className='extra-buttons'>
-          <button className='extra-button'>Call Us</button>
-          <button className='extra-button'>Get Directions</button> 
+          <button className="home-btn" onClick={handleButton}>Request a New Appointment</button>
+
+          <div className='extra-buttons'>
+            <a href="#section7">
+              <button className='extra-button'>Call Us</button>
+            </a>
+            <a href="#section7">
+              <button className='extra-button'>Get Directions</button>
+            </a>
           </div>
-          </div>
-          <div />
-        
+        </div>
+        <div />
+
       </section>
     );
   };
