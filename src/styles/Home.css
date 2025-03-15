@@ -104,7 +104,7 @@
   gap: 1rem; 
   margin: 0;
   padding: 0;
-  margin-right: 5%;
+  /* margin-right: 5%; */
   white-space: nowrap;
   
 }
@@ -117,7 +117,7 @@
   text-decoration: none;
   /* font-family: 'Raleway', sans-serif; */
   font-family: 'EB Garamond', serif;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 300;
   color: #333; 
   transition: color 0.3s ease;
@@ -193,19 +193,20 @@
     background-color: #f9f9f9;
     position: absolute;
     top: 100%; /* Place below the navbar */
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 50%;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     padding: .5rem 0;
     justify-content: center;
     text-align: center; /* Center the text */
     z-index: 10000; /* Ensure it's on top of other elements */
+    border-radius: 6px;
   }
   .nav-items a {
     text-decoration: none;
     /* font-family: 'Raleway', sans-serif; */
     font-family: 'EB Garamond', serif;
-    font-size: 1.2rem; /* Adjust font size for mobile */
+    font-size: 1rem; 
     font-weight: 300;
     color: #333; 
     transition: color 0.3s ease;
@@ -380,19 +381,20 @@
   }
 
 
-   .nav-items {
+  .nav-items {
     display: none;
     flex-direction: column; /* Stack the items vertically */
     background-color: #f9f9f9;
     position: absolute;
     top: 100%; /* Place below the navbar */
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 50%;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     padding: .5rem 0;
     justify-content: center;
     text-align: center; /* Center the text */
     z-index: 10000; /* Ensure it's on top of other elements */
+    border-radius: 6px;
   }
 
   /* Style the navigation links */
@@ -400,7 +402,7 @@
     text-decoration: none;
     /* font-family: 'Raleway', sans-serif; */
     font-family: 'EB Garamond', serif;
-    font-size: 1.2rem; /* Adjust font size for mobile */
+    font-size: 1rem; 
     font-weight: 300;
     color: #333; 
     transition: color 0.3s ease;
