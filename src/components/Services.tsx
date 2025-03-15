@@ -34,12 +34,16 @@ const Services: React.FC = () => {
       <h2 className='slogan-2'>Restoring Function, Relieving Pain, and Enhancing Mobility</h2>
       <div className="services-container">
         {services.map((service) => (
-          <div key={service.id} className="service-card">
-            <img src={service.image} alt={service.title} className="service-image" />
+            <div key={service.id} className="service-card">
+            <img 
+              src={service.image} 
+              alt={service.title} 
+              className="service-image" 
+              onClick={() => handleLearnMore(service.route)} 
+            />
             <h3 style={{fontFamily:'EB Garamond'}}>{service.title}</h3>
-             
             <button className="learn-more-btn" onClick={() => handleLearnMore(service.route)}>Learn More</button>
-          </div>
+            </div>
         ))}
       </div>
     </section>
