@@ -19,16 +19,12 @@
     overflow: hidden;
     text-align: center;
     display: flex;
-    flex-direction: column; /* Makes the image and text stack vertically */
-    /* justify-content: space-between; */
-    max-width: 400px; /* Limits the width of each item */
-    /* padding: 20px; */
-    align-items: center; /* Centers content */
+    flex-direction: column; 
+    max-width: 400px; 
+    align-items: center; 
     justify-content: center;
     margin: auto;
     margin-bottom: 20px;
-    /* width: 100%;  */
-    /* max-width: 100%;  */
   }
   
   /* Style the doctor's image */
@@ -45,17 +41,20 @@
     font-size: 1.5rem;
     color: #333;
     margin-bottom: 10px;
+    font-family: EB Garamond;
   }
   
   .doc-item p {
     color: #666;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-family: EB Garamond;
   }
 
   @media (max-width: 768px) {
     .doc-stack {
       grid-template-columns: 1fr;
     }
+  
   
     /* .doc-item {
       padding: 15px;
