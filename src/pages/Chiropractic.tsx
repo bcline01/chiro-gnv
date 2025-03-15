@@ -11,6 +11,7 @@ import FirstVisit from '../components/FirstVisit';
 import '../styles/FirstVisit.css';
 import Car from '../assets/car-accident.png';
 import Family from '../assets/family-pic.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -51,9 +52,9 @@ const Chiropractic: React.FC = () => {
           'Reduces inflammation and promotes faster recovery.',
           'Restores mobility and helps prevent long-term complications.',
           <>
-            Learn more about how chiropractic care can aid in your recovery{' '}
-            <a href="/car-accident-recovery">here</a>.
-          </>,
+          <Link to="/car-accident-recovery">here</Link>. aid in your recovery{' '}
+          <Link to="/car-accident-recovery">here</Link>.
+        </>
         ],
       },
       
