@@ -52,9 +52,9 @@ const Chiropractic: React.FC = () => {
           'Reduces inflammation and promotes faster recovery.',
           'Restores mobility and helps prevent long-term complications.',
           <>
-          <Link to="/car-accident-recovery">here</Link>. aid in your recovery{' '}
-          <Link to="/car-accident-recovery">here</Link>.
-        </>
+            Learn more about how chiropractic care can aid in your recovery{' '}
+            <Link to="/car-accident-recovery">here</Link>.
+          </>,
         ],
       },
       

@@ -15,6 +15,9 @@ import FunctionalMedicine from './pages/FunctionalMedicine';
 import Form from './pages/Form';
 import CarAccidentRecovery from './pages/Car-Accident';
 import AuthForm from './pages/AuthForm';
+// import DoctorsList from './pages/DoctorsList';
+import DocProfile from './pages/DocProfile';
+import ScrollToSection from './components/ScrollToSection';
 // import PatientPortal from './pages/PatientPortal';
 
 const App: React.FC = () => {
@@ -28,6 +31,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
+      <ScrollToSection />
       <div className="App">
         <Routes>
           {/* Define routes here */}
@@ -43,6 +47,8 @@ const App: React.FC = () => {
           <Route path="/appointment" element={<Form />} />
           <Route path="/auth-form" element={<AuthForm />} />
           <Route path="/car-accident-recovery" element={<CarAccidentRecovery />} />
+          {/* <Route path="/doctors" element={<DoctorsList />} /> */}
+          <Route path="/doctors/:id" element={<DocProfile />} />
           {/* <Route path="/patient-portal" element={<PatientPortal />} /> */}
         </Routes>
       </div>

@@ -29,7 +29,7 @@ const OwlCarouselWrapper: React.FC = () => {
             alt="Dr. Matthew Richeson" 
           />
           <h3>Dr. Matthew Richeson</h3>
-          <p>Chiropractor and Wellness Specialist</p>
+          {/* <p>Chiropractor and Wellness Specialist</p> */}
         </div>
       </div>
       <div className="carousel-item">
@@ -39,7 +39,7 @@ const OwlCarouselWrapper: React.FC = () => {
             alt="Dr. Matthew Cline" 
           />
           <h3>Dr. Matthew Cline</h3>
-          <p>Chiropractor and Wellness Specialist</p>
+          {/* <p>Chiropractor and Wellness Specialist</p> */}
         </div>
       </div>
       <div className="carousel-item">
@@ -49,7 +49,7 @@ const OwlCarouselWrapper: React.FC = () => {
             alt="Dr. Cooper Cline" 
           />
           <h3>Dr. Cooper Cline</h3>
-          <p>Chiropractor and Wellness Specialist</p>
+          {/* <p>Chiropractor and Wellness Specialist</p> */}
         </div>
       </div>
       <div className="carousel-item">
@@ -59,7 +59,7 @@ const OwlCarouselWrapper: React.FC = () => {
             alt="Dr. Kent Owens" 
           />
           <h3>Dr. Kent Owens</h3>
-          <p>Chiropractor and Wellness Specialist</p>
+          {/* <p>Chiropractor and Wellness Specialist</p> */}
         </div>
       </div>
     </Slider>
