@@ -2,10 +2,10 @@ import React from 'react';
 import Slider from 'react-slick'; // Import Slider from react-slick
 import 'slick-carousel/slick/slick.css'; // Import slick carousel CSS
 import 'slick-carousel/slick/slick-theme.css'; // Import slick carousel theme CSS
-import Man1 from '../assets/man1.png';
-import Man2 from '../assets/man2.png';
-import Man3 from '../assets/man3.png';
-import Man4 from '../assets/doc-4.png'; 
+// import Man1 from '../assets/man1.png';
+// import Man2 from '../assets/man2.png';
+// import Man3 from '../assets/man3.png';
+// import Man4 from '../assets/doc-4.png'; 
 import { doctors } from './doctors';
 import '../styles/OwlCarouselWrapper.css';
 import { Link } from 'react-router-dom';
